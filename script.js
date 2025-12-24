@@ -54,11 +54,22 @@ fadeInOnScroll();
 window.addEventListener('scroll', fadeInOnScroll);
 
 
+
 const contactForm = document.querySelector('.contact-form form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+        alert('Thank you for your message! I will get back to you soon.');
+    });
+}
+
+
+
+/*const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         alert('Thank you for your message! I will get back to you soon.');
         contactForm.reset();
     });
-}
+}*/
